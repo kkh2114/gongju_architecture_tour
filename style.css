@@ -776,10 +776,41 @@ p {
 }
 
 .phone-link {
-    color: white;
+    color: #4CAF50;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.1rem;
+    background: rgba(76, 175, 80, 0.1);
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 2px solid #4CAF50;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+}
+
+.phone-link:hover {
+    background: #4CAF50;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.phone-link:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(76, 175, 80, 0.3);
+}
+
+.phone-link::before {
+    content: "📞";
+    margin-right: 6px;
+}
+
+.phone-link::after {
+    content: " (터치하여 전화)";
+    font-size: 0.8rem;
+    opacity: 0.8;
+    font-weight: 400;
 }
 
 .contact-note {
